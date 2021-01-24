@@ -1,6 +1,14 @@
 class Item {
 
     constructor(titulo, descricao, createdDate, finalDate){
+
+        if(titulo == undefined || descricao == undefined || createdDate == undefined || finalDate == undefined){
+            throw new ConstructorItemError("Um ou mais campos estão vazios");
+        }
+
+        if(finalDate < createdDate){
+            throw new DataError("A data final é menor do que a data atual!");
+        }
         this.titulo = titulo;
         this.descricao = descricao;
         this.created = createdDate;

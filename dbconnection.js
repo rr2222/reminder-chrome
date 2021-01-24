@@ -17,11 +17,19 @@
     
 
     function adicionarItem(){
-        var titulo = document.getElementById("titulo");
-        var descricao = document.getElementById("descricao");
-        var data = document.getElementById("data");
+        try{
 
-        var item = new Item(titulo.value, descricao.value, new Date(), new Date(data.value));
+            var titulo = document.getElementById("titulo");
+            var descricao = document.getElementById("descricao");
+            var data = document.getElementById("data");
+    
+            var item = new Item(titulo.value, descricao.value, new Date(), new Date(data.value));
+        }
+        catch(e){
+            console.log(e.message);
+        }
+
+       
         
         var db = openIndexedDB();
 

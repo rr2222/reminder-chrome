@@ -21,7 +21,8 @@
         var descricao = document.getElementById("descricao");
         var data = document.getElementById("data");
 
-
+        var item = new Item(titulo.value, descricao.value, new Date(), new Date(data.value));
+        
         var db = openIndexedDB();
 
         db.onsuccess = function() {
@@ -33,17 +34,11 @@
 
             items.autoIncrement;
 
-            let item = {
-                titulo: titulo.value,
-                descricao: descricao.value,
-                created: new Date(),
-                finalDate: new Date(data.value)
-            };
 
-            let request = items.add(item); // (3)
+            let request = items.add(item); 
 
-            request.onsuccess = function() { // (4)
-                console.log("Book added to the store", request.result);
+            request.onsuccess = function() {
+        
                 window.location.replace("index.html");
 
             };
@@ -51,7 +46,6 @@
             request.onerror = function() {
                 console.log("Error", request.error);
         };
-
 
         };
                

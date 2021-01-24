@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #FFEDE1;
+            font-family: 'Sniglet', cursive;
+        }
+        .header{
+            width: 100%;
+            height: 60px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: flex-end;
+            justify-content: space-between;
+            
+        }
+
+        .header_style{
+            background-color: #80CED7;
+        }
+
+        .plus_button img{
+            height: 25px;
+            
+            padding: 6px;
+            margin-left: auto;
+            
+            
+        }
+
+        .plus_button{
+            margin-right: 20px;
+            border-radius: 50%;
+            background-color: #06d6a0;
+            
+        }
+        .plus_button a{
+            display: flex;
+            flex-direction: row;
+        }
+        .title{
+            margin-left:20px ;
+        }
+
+        .title_style{
+            letter-spacing: 1.5px;
+        }
+
+        .title_card{
+            color: #80CED7;
+            font-size: 20px;
+        }
+
+        .item{
+            width: 100%;
+            margin-top: 10px;
+            
+        }
+
+        .counter_down{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+
+        .item hr{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .item_style{
+            background-color: white;
+            border-radius: 14px;
+        }
+
+        .item_title{
+            display: flex;
+            flex-direction: row;
+            align-content: flex-end;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .body_content{
+            padding: 15px;
+        }
+
+        .items{
+            display: flex;
+            flex-direction: column;
+            margin-right: 5px;
+            margin-left: 5px;
+            
+        }
+
+        .list_style{
+            list-style: none;
+            
+        }
+        .card_footer{
+            margin-right: 20px;
+        }
+        .card_footer ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .card_footer li{
+            margin-right: 4px;
+            margin-left: 4px;
+        }
+
+    </style>
+
+
+
+</head>
+<body onLoad="readItems()">
+    <div class="header header_style">
+        <div class="title">
+            <h1 class="title_style">Adicionar tarefa</h1>
+        </div>
+        <div class="plus_button ">
+            <a href="form.html"><img src="img/plus.png" alt=""></a>
+            
+         
+        </div>
+    </div>
+
+    <div class="items" id="mother">
+        
+    <!-- <div class="item item_style">
+        <div class=" item_title">
+            <p class="title_card">Cadastro usuario no sistema</p>
+            <p class="title_card">Data: 23/11/2021</p>
+        </div>
+        <div class="counter_down">
+            <p>5d 0h 0m 37s</p>
+        </div>
+        <hr>
+        <div class="card_body">
+            <p class="body_content">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+        </div>
+        <div class="card_footer">
+            <ul class="list_style">
+                <li style="color: #06d6a0;">Editar</li>
+                <li style="color: #ef476f">Remover</li>
+            </ul>
+        </div>
+    </div> -->
+
+    
+
+
+    </div>
+
+    
+    <script src="dbconnection.js"></script>
+</body>
+</html>

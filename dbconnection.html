@@ -1,0 +1,44 @@
+<script>
+ 
+    let openRequest = indexedDB.open("keyToHerHeart", 1);
+    let db;
+
+    openRequest.onupgradeneeded = function()
+    {
+    console.log("Atualizando...");
+    db = openRequest.result;
+    db.createObjectStore('items', {keyPath: 'id'});
+    };
+
+
+   
+   
+    
+    openRequest.onsuccess = function() {
+        db = openRequest.result;
+        console.log(db);
+        
+        let transaction = db.transaction(["items"], "readwrite");
+
+        let items = transaction.objectStore("items");
+
+        let item = {
+            id: 2,
+            titulo: "teste",
+            descricao: "desc",
+            created: new Date()
+        };
+
+        let request = items.add(item); // (3)
+
+        request.onsuccess = function() { // (4)
+            console.log("Book added to the store", request.result);
+        };
+
+        request.onerror = function() {
+            console.log("Error", request.error);
+        };
+     
+    };
+
+</script>
